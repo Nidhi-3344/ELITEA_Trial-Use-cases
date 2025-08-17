@@ -17,9 +17,8 @@ class TestAddition(unittest.TestCase):
     def test_add_floats(self):
         self.assertAlmostEqual(add(2.5, 3.7), 6.2, places=2)
 
-# Placeholder for the add function
 def add(a, b):
-    pass
+    return a + b
 
 if __name__ == '__main__':
     unittest.main()
