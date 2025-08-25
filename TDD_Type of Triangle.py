@@ -1,8 +1,20 @@
 import unittest
 
 def classify_triangle(a, b, c):
-    # TODO: Implement this function
-    pass
+    # Check if it's a valid triangle
+    if a <= 0 or b <= 0 or c <= 0 or (a + b <= c) or (b + c <= a) or (a + c <= b):
+        return "Not a triangle"
+    
+    # Check if it's equilateral
+    if a == b == c:
+        return "Equilateral"
+    
+    # Check if it's isosceles
+    if a == b or b == c or a == c:
+        return "Isosceles"
+    
+    # If it's not equilateral or isosceles, it must be scalene
+    return "Scalene"
 
 class TestTriangleClassification(unittest.TestCase):
     def test_invalid_triangle(self):
